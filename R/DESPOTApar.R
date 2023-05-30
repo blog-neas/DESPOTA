@@ -4,7 +4,7 @@ library(parallel)
 
 
 
-#' Title
+#' DespotaPar
 #'
 #' @param data 
 #' @param distmat 
@@ -16,10 +16,13 @@ library(parallel)
 #' @param seed 
 #' @param ... 
 #'
-#' @return
-#' @export
+#' @return gatto
+#' @export 
 #'
 #' @examples
+#' #cane
+#' 
+#' 
 despotaPAR3 <- function(data, distmat = NULL, distMethod = "euclidean", agglMethod = "ward.D2", M = 999, alpha = 0.01, listVal = FALSE, seed = NULL, ...) {
   
   date1 <- format(Sys.time(), "%a %d %b %Y, %X")
