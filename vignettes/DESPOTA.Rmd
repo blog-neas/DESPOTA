@@ -1,0 +1,29 @@
+---
+title: "DESPOTA"
+subtitle: "DEndogram Slicing through a PermutatiOn Test Approach"
+author: "Valeria Policastro"
+date: "`r Sys.Date()`"
+vignette: >
+  %\VignetteIndexEntry{robin}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+output:
+  knitr:::html_vignette:
+    toc: yes
+    toc_depth: 2
+---
+
+
+# DESPOTA
+
+# Loding package
+```{r}
+library(DESPOTA)
+```
+
+# Input 
+
+```{r}
+my_data <- system.file("example/customer_data", package="DESPOTA")
+
+```

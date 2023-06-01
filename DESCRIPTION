@@ -1,12 +1,25 @@
 Package: DESPOTA
-Type: Package
-Title: What the Package Does (Title Case)
+Title: DEndogram Slicing through a PermutatiOn Test Approach
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: c(
+    person("Domenico", "Vistocco", email = "domenico.vistocco@unina.it", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8541-6755")),
+    person("Lucio", "Palazzo", email = "lucio.palazzo@unina.it", role = c("aut"), comment = c(ORCID = "0000-0001-7529-4689")),
+    person("Valeria", "Policastro", email = "valeria.policastro@gmail.com", role = c("aut"), comment = c(ORCID = "0000-0003-1016-460X")))
+Maintainer: Domenico Vistocco <domenico.vistocco@unina.it>
+Description: DESPOTA is a novel approach exploiting permutation test to automatically detect a partition among those embedded in a dendrogram. Unlike the traditional approach, DESPOTA includes partitions not corresponding to horizontal cuts of the dendrogram in the search space. Reference in Bruzzese D., Vistocco D. (2015) <https://doi.org/10.1007/s00357-015-9179-x> .
+License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 RoxygenNote: 7.2.3
+URL: https://github.com/blog-neas/DESPOTA
+Depends:
+    R (>= 4.2.0)
+Imports:
+    parallel,
+    dendextend,
+    graphics,
+    fpc
+VignetteBuilder: knitr
+Suggests:
+    ggplot2,
+    knitr,
+    rmarkdown
