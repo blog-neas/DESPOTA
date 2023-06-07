@@ -1,6 +1,8 @@
-# DESPOTA 0.1.0
+# DESPOTA 0.1.2
 
 * The internal function `findpos` is now in `utils.R` file.
+
+* Added the `customer_data` dataset.
 
 
 # DESPOTA 0.1.0
