@@ -49,3 +49,6 @@ po/*~
 rsconnect/
 /doc/
 /Meta/
+
+# Additional folders
+materiale_extra/

@@ -49,6 +49,6 @@ Despota
 \examples{
 data <- c(1,2,3,4,5, 7,9,10,11,12,  19,24,28,32,38, 54)
 desp_toy2 <- despota(data, distMethod = "euclidean", 
-agglMethod = "ward.D2", M = 99, alpha = 0.05, seed = 1234, par = FALSE)
+agglMethod = "ward.D2", M = 999, alpha = 0.05, seed = 1234, par = FALSE)
 
 }
