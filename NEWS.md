@@ -6,6 +6,8 @@
 
 * Added some tests and `testthat` to Suggests field in DESCRIPTION.
 
+* Added a draft vignette.
+
 
 # DESPOTA 0.1.0
 
