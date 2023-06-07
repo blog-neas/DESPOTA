@@ -24,3 +24,4 @@ Suggests:
     ggplot2,
     knitr,
     rmarkdown
+LazyData: true
