@@ -4,10 +4,14 @@
 \alias{plot.despota}
 \title{plot.despota}
 \usage{
-\method{plot}{despota}(x, ...)
+\method{plot}{despota}(x, main = NULL, sub = NULL, ...)
 }
 \arguments{
 \item{x}{a despota object}
+
+\item{main}{plot title}
+
+\item{sub}{plot subtitle}
 
 \item{...}{additional options passed to the plot function}
 }

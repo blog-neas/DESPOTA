@@ -3,6 +3,8 @@
 #' @description Plot a despota class object
 #' 
 #' @param x a despota object
+#' @param main plot title
+#' @param sub plot subtitle
 #' @param ... additional options passed to the plot function
 #' 
 #' @return a dendrogram of the despota model 
@@ -11,11 +13,11 @@
 #' @export 
 #'
 
-plot.despota <- function(x, ...) {
+plot.despota <- function(x, main = NULL, sub = NULL, ...) {
   
-  dots <- list(...)
-  main <- dots$main
-  sub <- dots$sub
+  # dots <- list(...)
+  # main <- dots$main
+  # sub <- dots$sub
   
   data <- x$Arguments$data
   Hcd <- x$Arguments$Hcd
