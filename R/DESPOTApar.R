@@ -31,7 +31,7 @@ despotaPar <- function(data, distmat = NULL, distMethod = "euclidean",
   
   date1 <- format(Sys.time(), "%a %d %b %Y, %X")
   stopifnot(alpha > 0 & alpha < 1 & M > 0)
-  stopifnot(is.null(ncores) | is.integer(ncores) | ncores > 0 | (is.integer(ncores) & ncores <= parallel::detectCores(logical = FALSE)))
+  stopifnot(is.null(ncores) | (is.integer(ncores) & ncores > 0 & ncores <= parallel::detectCores(logical = FALSE)))
   
   if(is.null(ncores)){
     ncores <- parallel::detectCores(logical = FALSE) - 1
