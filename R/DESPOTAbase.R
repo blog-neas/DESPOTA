@@ -24,7 +24,6 @@
 #'
 #' @keywords internal
 
-
 despotaBase <- function(data, distmat = NULL, distMethod = "euclidean", agglMethod = "ward.D2", M = 999, alpha = 0.01, listVal = FALSE, seed = NULL) {
   
   date1 <- format(Sys.time(), "%a %d %b %Y, %X")
@@ -81,15 +80,9 @@ despotaBase <- function(data, distmat = NULL, distMethod = "euclidean", agglMeth
   
   names(listClust) <- 1:nrow(matrixNodes)
   
-  findpos <- function(i) { 
-    
-    if(i == nrow(matrixNodes)) return(i)
-    
-    as.numeric(names(which(matrixNodes[i : nrow(matrixNodes), 1] == 1)[ matrixNodes[i, 1]])) 
-    
-  }
+  ####!!! Qua c'era la function findpos, adesso è in utils
   
-  x <- sapply(1: nrow(matrixNodes), findpos)
+  x <- sapply(1: nrow(matrixNodes), findpos, matrixNodes = matrixNodes)
   
   STRING <- rep("0", nrow(matrixNodes))
   

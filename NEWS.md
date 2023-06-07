@@ -1,5 +1,10 @@
 # DESPOTA 0.1.0
 
+* The internal function `findpos` is now in utils.R file.
+
+
+# DESPOTA 0.1.0
+
 * Updated `README.md` file.
 
 * Added a `NEWS.md` file to track main changes among different versions.

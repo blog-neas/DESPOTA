@@ -81,12 +81,9 @@ despotaPar <- function(data, distmat = NULL, distMethod = "euclidean",
   
   names(listClust) <- 1:nrow(matrixNodes)
   
-  findpos <- function(i) { 
-    if(i == nrow(matrixNodes)) return(i)
-    as.numeric(names(which(matrixNodes[i : nrow(matrixNodes), 1] == 1)[ matrixNodes[i, 1]])) 
-  }
+  ####!!! Qua c'era la function findpos, adesso è in utils
   
-  x <- sapply(1: nrow(matrixNodes), findpos)
+  x <- sapply(1: nrow(matrixNodes), findpos, matrixNodes = matrixNodes)
   STRING <- rep("0", nrow(matrixNodes))
   
   for(i in 2:nrow(matrixNodes)){
