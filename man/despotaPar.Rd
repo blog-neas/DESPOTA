@@ -12,7 +12,8 @@ despotaPar(
   M = 999,
   alpha = 0.01,
   listVal = FALSE,
-  seed = NULL
+  seed = NULL,
+  ncores = NULL
 )
 }
 \arguments{
@@ -36,6 +37,8 @@ despotaPar(
 procedure (default FALSE)}
 
 \item{seed}{seed for the permutation}
+
+\item{ncores}{number of cores to be used. Default `ncores = NULL` automatically chooses the number of all possible physical cores minus one.}
 }
 \value{
 a list

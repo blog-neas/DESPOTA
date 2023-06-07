@@ -13,7 +13,8 @@ despota(
   alpha = 0.01,
   listVal = FALSE,
   seed = NULL,
-  par = TRUE
+  par = TRUE,
+  ncores = NULL
 )
 }
 \arguments{
@@ -39,12 +40,17 @@ procedure (default FALSE)}
 \item{seed}{seed for the permutation}
 
 \item{par}{logical to perform parallel computing (default TRUE)}
+
+\item{ncores}{number of cores to be used. Default `ncores = NULL` automatically chooses the number of all possible physical cores minus one.}
 }
 \value{
 a list
 }
 \description{
 Despota
+}
+\details{
+Frontend function that fits a dendrogram and finds the optimal cut through the DESPOTA procedure.
 }
 \examples{
 data <- c(1,2,3,4,5, 7,9,10,11,12,  19,24,28,32,38, 54)

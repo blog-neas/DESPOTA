@@ -7,9 +7,9 @@
 findpos(i, matrixNodes)
 }
 \arguments{
-\item{i}{asd}
+\item{i}{number of rows to be matched}
 
-\item{matrixNodes}{asd}
+\item{matrixNodes}{data matrix with the necessary data}
 }
 \description{
 Despota parallelized

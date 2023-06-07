@@ -50,5 +50,6 @@ rsconnect/
 /doc/
 /Meta/
 
-# Additional folders
+# Additional files to exclude
 materiale_extra/
+.Rbuildignore

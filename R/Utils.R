@@ -2,8 +2,8 @@
 #' 
 #' @description Despota parallelized
 #' 
-#' @param i asd
-#' @param matrixNodes asd
+#' @param i number of rows to be matched
+#' @param matrixNodes data matrix with the necessary data
 #'
 #' @export 
 #'

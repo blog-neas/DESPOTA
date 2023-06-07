@@ -15,6 +15,7 @@
 #' @param listVal logical to add additional information regarding the splitting 
 #' procedure (default FALSE)
 #' @param seed seed for the permutation
+#' @param ncores number of cores to be used. Default `ncores = NULL` automatically chooses the number of all possible physical cores minus one.
 #'
 #' @return a list 
 #' @import dendextend parallel fpc
@@ -26,12 +27,15 @@
 
 despotaPar <- function(data, distmat = NULL, distMethod = "euclidean", 
                         agglMethod = "ward.D2", M = 999, alpha = 0.01, 
-                        listVal = FALSE, seed = NULL) {
+                        listVal = FALSE, seed = NULL, ncores = NULL) {
   
   date1 <- format(Sys.time(), "%a %d %b %Y, %X")
   stopifnot(alpha > 0 & alpha < 1 & M > 0)
+  stopifnot(is.null(ncores) | is.integer(ncores) | ncores > 0 | (is.integer(ncores) & ncores <= parallel::detectCores(logical = FALSE)))
   
-  ncores <- parallel::detectCores(logical = FALSE) - 1
+  if(is.null(ncores)){
+    ncores <- parallel::detectCores(logical = FALSE) - 1
+  }
   cl <- parallel::makeCluster(ncores)
   
   if(agglMethod == "ward") {
@@ -317,6 +321,5 @@ despotaPar <- function(data, distmat = NULL, distMethod = "euclidean",
   if(listVal) return(list(Arguments = Args, list_values = list_values, DF = DF))
   
   OUT <- list(Arguments = Args, DF = DF) 
-  class(OUT) <- "despota"
   return(OUT)
 }

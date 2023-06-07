@@ -4,6 +4,8 @@
 
 * Added the `customer_data` dataset.
 
+* Added some tests and `testthat` to Suggests field in DESCRIPTION.
+
 
 # DESPOTA 0.1.0
 

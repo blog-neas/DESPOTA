@@ -16,7 +16,10 @@
 #' procedure (default FALSE)
 #' @param seed seed for the permutation
 #' @param par logical to perform parallel computing (default TRUE)
-#'
+#' @param ncores number of cores to be used. Default `ncores = NULL` automatically chooses the number of all possible physical cores minus one.
+#' @details
+#' Frontend function that fits a dendrogram and finds the optimal cut through the DESPOTA procedure.
+#' 
 #' @return a list 
 #' @export
 #' 
@@ -27,13 +30,13 @@
 #' 
 despota <- function(data, distmat = NULL, distMethod = "euclidean", 
                     agglMethod = "ward.D2", M = 999, alpha = 0.01, 
-                    listVal = FALSE, seed = NULL, par=TRUE) {
+                    listVal = FALSE, seed = NULL, par=TRUE, ncores = NULL) {
   
   if(par==TRUE)
   {
     output <- despotaPar(data, distmat, distMethod, 
                agglMethod , M, alpha, 
-               listVal, seed)
+               listVal, seed, ncores)
   }else{
   output <- despotaBase(data, distmat, distMethod, 
               agglMethod , M, alpha, 
