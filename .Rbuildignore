@@ -3,4 +3,5 @@
 ^doc$
 ^Meta$
 ^materiale_extra$
-^\.github
+^\.github$
+^\.github/workflows$
