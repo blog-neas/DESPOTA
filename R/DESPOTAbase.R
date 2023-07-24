@@ -17,8 +17,8 @@
 #' @param seed seed for the permutation
 #'
 #' @return a list 
-#' @import dendextend fpc
-#' @importFrom stats as.dendrogram as.dist dist hclust order.dendrogram
+#' @import dendextend fpc fastcluster
+#' @importFrom stats as.dendrogram as.dist dist order.dendrogram
 #' @importFrom utils tail
 #' @export 
 #'
@@ -58,7 +58,7 @@ despotaBase <- function(data, distmat = NULL, distMethod = "euclidean", agglMeth
   
   distMatrix <- as.matrix(distMeasure)
   
-  Hcd <- stats::as.dendrogram(stats::hclust(distMeasure, method = agglMethod))
+  Hcd <- stats::as.dendrogram(fastcluster::hclust(distMeasure, method = agglMethod))
   
   #suppressMessages(library(dendextend))
   
@@ -212,13 +212,13 @@ despotaBase <- function(data, distmat = NULL, distMethod = "euclidean", agglMeth
               if(lobs == 1) { 
                 
                 distRightClusterPerm <- stats::as.dist(distMat[samR, samR])
-                hcij <- stats::hclust(distRightClusterPerm, method = agglMethod)
+                hcij <- fastcluster::hclust(distRightClusterPerm, method = agglMethod)
                 obsij <- ClusterRight; obsk <- ClusterLeft; heightk <- 0
                 
               } else { 
                 
                 distLeftClusterPerm <- stats::as.dist(distMat[samL, samL])
-                hcij <- stats::hclust(distLeftClusterPerm, method = agglMethod)
+                hcij <- fastcluster::hclust(distLeftClusterPerm, method = agglMethod)
                 obsk <- ClusterRight; obsij <- ClusterLeft; heightk <- 0 
               }
               
@@ -229,8 +229,8 @@ despotaBase <- function(data, distmat = NULL, distMethod = "euclidean", agglMeth
               distLeftClusterPerm <- stats::as.dist(distMat[samL, samL])
               distRightClusterPerm <- stats::as.dist(distMat[samR, samR])
               
-              hcL <- stats::hclust(distLeftClusterPerm, method = agglMethod)
-              hcR <- stats::hclust(distRightClusterPerm, method = agglMethod)
+              hcL <- fastcluster::hclust(distLeftClusterPerm, method = agglMethod)
+              hcR <- fastcluster::hclust(distRightClusterPerm, method = agglMethod)
               
               heiL <- utils::tail(hcL$height, 1)
               heiR <- utils::tail(hcR$height, 1)
@@ -252,10 +252,10 @@ despotaBase <- function(data, distmat = NULL, distMethod = "euclidean", agglMeth
             nj <- length(splij[[2]])
             
             distik <- stats::as.dist(distMatrix[c(obsk, splij[[1]]), c(obsk, splij[[1]])])
-            heightik <- utils::tail(stats::hclust(distik, method = agglMethod)$height, 1)
+            heightik <- utils::tail(fastcluster::hclust(distik, method = agglMethod)$height, 1)
             
             distjk <- stats::as.dist(distMatrix[c(obsk, splij[[2]]), c(obsk, splij[[2]])])
-            heightjk <- utils::tail(stats::hclust(distjk, method = agglMethod)$height, 1)
+            heightjk <- utils::tail(fastcluster::hclust(distjk, method = agglMethod)$height, 1)
             
             heiN <- switch(agglMethod, 
                            

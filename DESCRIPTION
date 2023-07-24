@@ -18,7 +18,8 @@ Imports:
     parallel,
     dendextend,
     graphics,
-    fpc
+    fpc,
+    fastcluster
 VignetteBuilder: knitr
 Suggests:
     ggplot2,
