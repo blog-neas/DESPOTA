@@ -278,7 +278,7 @@ despotaBase <- function(data, distmat = NULL, distMethod = "euclidean", agglMeth
                            centroid = (ni * heightik + nj * heightjk)/(ni + nj) - 
                              ni*nj * heightij/(ni + nj)^2)
             
-            rcm[j] <- (heightij - heightk)/(heiN - heightk)
+            rcm[j] <- (heightij - heightk)/((heiN - heightk) + 0.00001)
             
           }
           

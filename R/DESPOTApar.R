@@ -205,7 +205,7 @@ despotaPar <- function(data, distmat = NULL, distMethod = "euclidean",
                      centroid = (ni * heightik + nj * heightjk)/(ni + nj) - ni*nj * heightij/(ni + nj)^2
       )
       
-      rcm[kk] <- (heightij - heightk)/(heiN - heightk)
+      rcm[kk] <- (heightij - heightk)/((heiN - heightk) + 0.00001)
     }
     return(rcm)
   } # END WHILE
