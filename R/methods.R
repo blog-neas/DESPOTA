@@ -7,12 +7,15 @@
 #' @param sub plot subtitle
 #' @param ... additional options passed to the plot function
 #' 
-#' @return a dendrogram of the despota model 
+#' @return a dendrogram with the output of the despota model 
 #' @import dendextend
 #' @importFrom graphics abline mtext par
 #' @export 
 #'
-
+#' @examples
+#' data <- c(1,2,3,4,5, 7,9,10,11,12, 19,24,28,32,38, 54)
+#' out <- despota(data, alpha = .05, seed = 31, listVal = TRUE, par = FALSE)
+#' plot(out)
 plot.despota <- function(x, main = NULL, sub = NULL, ...) {
   
   # dots <- list(...)

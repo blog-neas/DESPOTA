@@ -1,6 +1,5 @@
 # DESPOTA <!-- <img src="man/img/hexlogo.png" align="right" height="138.5" /> -->
 
-
 <!-- badger source: https://github.com/GuangchuangYu/badger -->
 <!-- badges: start -->
 <!-- [![CRAN status](https://www.r-pkg.org/badges/version/DESPOTA?color=orange)](https://cran.r-project.org/package=DESPOTA) -->
@@ -19,6 +18,7 @@ The output of hierarchical clustering methods is typically displayed as a dendro
 
 You can find more information on **DESPOTA** [following this link](http://domenicovistocco.it/en/dv-blog/despota-page/).
 
+
 ## Installation
 
 ``` r
@@ -26,10 +26,16 @@ You can find more information on **DESPOTA** [following this link](http://domeni
 # !!!---not available at the moment---!!!
 # install.packages("DESPOTA")
 
-# Or the development version from GitHub
+# Install the stable version from GitHub
 # install.packages("devtools")
 devtools::install_github("blog-neas/DESPOTA")
+# Or the development version from GitHub 
+devtools::install_github("blog-neas/DESPOTA", ref = "devel")
 ```
+
+## Refecence
+
+Bruzzese, D., & Vistocco, D. (2015). DESPOTA: DEndrogram slicing through a pemutation test approach. Journal of classification, 32, 285-304.
 
 
 ## Roadmap
@@ -69,6 +75,7 @@ Using `DESPOTA` and discovered a bug? That's annoying! Don't let others have the
 * Detailed steps to reproduce the bug.
 
 Care to fix bugs or implement new functionality for `INAr`? Awesome! 👏 Have a look at the [issue list][issues] and leave a comment on the things you want to work on.
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 

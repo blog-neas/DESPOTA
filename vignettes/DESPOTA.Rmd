@@ -22,13 +22,21 @@ The output of hierarchical clustering methods is typically displayed as a dendro
 
 
 # Loding package
-```{r}
+```{r, library}
 library(DESPOTA)
 ```
 
-# Input 
-
-```{r}
+# Data
+```{r, load dataset}
 data("customer_data")
 ```
 
+# Method
+```{r, run_function}
+output <- despota(customer_data, agglMethod = "ward.D2", alpha = 0.05, seed = 142, par = FALSE)
+```
+
+# Plot
+```{r, plot}
+plot(output)
+```
