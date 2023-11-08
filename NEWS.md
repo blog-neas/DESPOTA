@@ -1,3 +1,12 @@
+# DESPOTA 0.1.5
+
+* Added a devel branch 
+
+* Updated the vignette with a working example
+
+* Updated `customer_data` data description
+
+
 # DESPOTA 0.1.2
 
 * The internal function `findpos` is now in `utils.R` file.

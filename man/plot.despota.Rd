@@ -16,8 +16,13 @@
 \item{...}{additional options passed to the plot function}
 }
 \value{
-a dendrogram of the despota model
+a dendrogram with the output of the despota model
 }
 \description{
 Plot a despota class object
+}
+\examples{
+data <- c(1,2,3,4,5, 7,9,10,11,12, 19,24,28,32,38, 54)
+out <- despota(data, alpha = .05, seed = 31, listVal = TRUE, par = FALSE)
+plot(out)
 }

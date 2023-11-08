@@ -41,20 +41,26 @@ procedure (default FALSE)}
 
 \item{par}{logical to perform parallel computing (default TRUE)}
 
-\item{ncores}{number of cores to be used. Default `ncores = NULL` automatically chooses the number of all possible physical cores minus one.}
+\item{ncores}{number of cores to be used. Default `ncores = NULL` automatically 
+chooses the number of all possible physical cores minus one.}
 }
 \value{
-a list
+A list of two elements, `Arguments` and `DF`. The first contains the 
+dendrogram branches and splits in a dendextend format and additional information 
+of the method used; the second object is a data.frame containing the observations, 
+the cluster labels and their related p-values.
+When `listVal = TRUE`, the output has an additional object containing the info 
+regarding test statistics in each split.
 }
 \description{
-Despota
+DESPOTA hierarchical clustering of a dataset or a dissimilarity matrix
 }
 \details{
 Frontend function that fits a dendrogram and finds the optimal cut through the DESPOTA procedure.
 }
 \examples{
 data <- c(1,2,3,4,5, 7,9,10,11,12,  19,24,28,32,38, 54)
-desp_toy2 <- despota(data, distMethod = "euclidean", 
-agglMethod = "ward.D2", M = 999, alpha = 0.05, seed = 1234, par = FALSE)
+despota(data, distMethod = "euclidean", agglMethod = "ward.D2", 
+M = 999, alpha = 0.05, seed = 1234, par = FALSE)
 
 }

@@ -6,7 +6,7 @@
 [![R-CMD-check](https://github.com/blog-neas/DESPOTA/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/blog-neas/DESPOTA/actions/workflows/check-standard.yaml)
 <!-- [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![Project Status: Active - The project is being actively developed](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![codecov](https://codecov.io/gh/blog-neas/INAr/branch/main/graph/badge.svg?token=0XHCFZZYN8)](https://codecov.io/gh/blog-neas/INAr) 
+[![codecov](https://codecov.io/gh/blog-neas/DESPOTA/branch/main/graph/badge.svg?token=0XHCFZZYN8)](https://codecov.io/gh/blog-neas/DESPOTA) 
 [![License: GPL-3](https://img.shields.io/badge/license-GPL--3-blue.svg)](https://cran.r-project.org/web/licenses/GPL-3) -->
 <!-- badges: end -->
 
@@ -18,6 +18,7 @@ The output of hierarchical clustering methods is typically displayed as a dendro
 
 You can find more information on **DESPOTA** [following this link](http://domenicovistocco.it/en/dv-blog/despota-page/).
 
+
 ## Installation
 
 ``` r
@@ -25,10 +26,16 @@ You can find more information on **DESPOTA** [following this link](http://domeni
 # !!!---not available at the moment---!!!
 # install.packages("DESPOTA")
 
-# Or the development version from GitHub
+# Install the stable version from GitHub
 # install.packages("devtools")
 devtools::install_github("blog-neas/DESPOTA")
+# Or the development version from GitHub 
+devtools::install_github("blog-neas/DESPOTA", ref = "devel")
 ```
+
+## Refecence
+
+Bruzzese, D., & Vistocco, D. (2015). DESPOTA: DEndrogram slicing through a pemutation test approach. Journal of classification, 32, 285-304.
 
 
 ## Roadmap
@@ -67,7 +74,8 @@ Using `DESPOTA` and discovered a bug? That's annoying! Don't let others have the
 * Any details about your local setup that might be helpful in troubleshooting.
 * Detailed steps to reproduce the bug.
 
-Care to fix bugs or implement new functionality for `INAr`? Awesome! 👏 Have a look at the [issue list][issues] and leave a comment on the things you want to work on.
+Care to fix bugs or implement new functionality for `DESPOTA`? Awesome! 👏 Have a look at the [issue list][issues] and leave a comment on the things you want to work on.
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
