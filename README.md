@@ -1,5 +1,4 @@
-# DESPOTA <!-- <img src="man/img/hexlogo.png" align="right" height="138.5" /> -->
-
+# DESPOTA <img src="man/img/logoDespota.png" align="right" height="138.5" />
 
 <!-- badger source: https://github.com/GuangchuangYu/badger -->
 <!-- badges: start -->
