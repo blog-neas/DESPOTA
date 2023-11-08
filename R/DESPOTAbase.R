@@ -15,6 +15,7 @@
 #' @param listVal logical to add additional information regarding the splitting 
 #' procedure (default FALSE)
 #' @param seed seed for the permutation
+#' @param verbose additional information of the procedure(default FALSE)
 #'
 #' @return a list 
 #' @import dendextend fpc fastcluster
@@ -24,9 +25,13 @@
 #'
 #' @keywords internal
 
-despotaBase <- function(data, distmat = NULL, distMethod = "euclidean", agglMethod = "ward.D2", M = 999, alpha = 0.01, listVal = FALSE, seed = NULL) {
+despotaBase <- function(data, distmat = NULL, distMethod = "euclidean", 
+                        agglMethod = "ward.D2", M = 999, alpha = 0.01, 
+                        listVal = FALSE, seed = NULL, verbose=FALSE) {
   
   date1 <- format(Sys.time(), "%a %d %b %Y, %X")
+  if(verbose) cat("Call:  method = ",agglMethod,", M = ",M,", alpha = ",
+                  alpha,"\n",sep = "")
   
   stopifnot(alpha > 0 & alpha < 1 & M > 0)
   
@@ -385,7 +390,7 @@ despotaBase <- function(data, distmat = NULL, distMethod = "euclidean", agglMeth
     
   }
   
-  cat("Start: ", date1, "\nEnd: ", format(Sys.time(), "%X"), "\n\n")
+  if(verbose) cat("Start: ", date1, "\nEnd: ", format(Sys.time(), "%X"), "\n\n")
   
   Args <- list(data = deparse(substitute(data)), Hcd = Hcd, 
                distMeasure = attr(distMeasure, "method"), 
