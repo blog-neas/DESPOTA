@@ -24,6 +24,7 @@
 #' @export 
 #'
 #' @keywords internal
+#' 
 
 despotaBase <- function(data, distmat = NULL, distMethod = "euclidean", 
                         agglMethod = "ward.D2", M = 999, alpha = 0.01, 

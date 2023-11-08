@@ -1,5 +1,7 @@
 # DESPOTA <img src="man/img/logoDespota.png" align="right" height="138.5" />
 
+
+
 <!-- badger source: https://github.com/GuangchuangYu/badger -->
 <!-- badges: start -->
 <!-- [![CRAN status](https://www.r-pkg.org/badges/version/DESPOTA?color=orange)](https://cran.r-project.org/package=DESPOTA) -->
