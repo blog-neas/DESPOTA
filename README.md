@@ -56,7 +56,7 @@ Bruzzese, D., & Vistocco, D. (2015). DESPOTA: DEndrogram slicing through a pemut
 - [ ] Define package structure and state
 	- [ ] Functions
 	- [x] Dependencies list
-- [x] Licensing: GPL-3
+- [x] Licensing: MIT
 - [ ] Testing
 - [ ] Documentation
 	- [ ] Function documentation
