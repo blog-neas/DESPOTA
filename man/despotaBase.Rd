@@ -12,7 +12,8 @@ despotaBase(
   M = 999,
   alpha = 0.01,
   listVal = FALSE,
-  seed = NULL
+  seed = NULL,
+  verbose = FALSE
 )
 }
 \arguments{
@@ -36,6 +37,8 @@ despotaBase(
 procedure (default FALSE)}
 
 \item{seed}{seed for the permutation}
+
+\item{verbose}{additional information of the procedure(default FALSE)}
 }
 \value{
 a list
