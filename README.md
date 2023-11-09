@@ -31,8 +31,8 @@ You can find more information on **DESPOTA** [following this link](http://domeni
 # Install the stable version from GitHub
 # install.packages("devtools")
 devtools::install_github("blog-neas/DESPOTA")
-# Or the development version from GitHub 
-devtools::install_github("blog-neas/DESPOTA", ref = "devel")
+# Or the development version from GitHub
+remotes::install_github("blog-neas/DESPOTA@devel")
 ```
 
 ## Refecence
