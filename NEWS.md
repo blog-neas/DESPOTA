@@ -1,19 +1,21 @@
 # DESPOTA 0.1.5
 
-* Added a devel branch 
+* Added a devel branch.
 
-* Updated the vignette with a working example
+* Updated the vignette with a working example.
 
-* Updated `customer_data` data description
+* Updated `customer_data` data description.
+
+* Added a  `verbose` option in the `despotaBase` function.
 
 
 # DESPOTA 0.1.2
 
-* The internal function `findpos` is now in `utils.R` file.
+* The internal function `findpos` is now in the `utils.R` file.
 
 * Added the `customer_data` dataset.
 
-* Added some tests and `testthat` to Suggests field in DESCRIPTION.
+* Added some tests and `testthat` to the Suggests field in DESCRIPTION.
 
 * Added a draft vignette.
 
@@ -28,7 +30,7 @@
 
 * additions: `Depends: R (>= 4.2.0)`. In Imports: `parallel`, `dendextend`, `graphics`, `fpc`. In Suggests: `ggplot2`, `knitr`, `rmarkdown`.
 
-* Added `plot.despota` as method.
+* Added `plot.despota` as a method.
 
 
 # DESPOTA 0.0.1
