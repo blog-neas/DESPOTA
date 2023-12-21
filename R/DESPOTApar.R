@@ -149,6 +149,8 @@ despotaPar <- function(data, distmat = NULL, distMethod = "euclidean",
   }
   
   list_values <- list()
+  rck <- NA
+  rcm <- NA
   
   # LOOP PARALLELIZZATO! ----------------------
   # -------------------------------------------

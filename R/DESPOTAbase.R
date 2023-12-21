@@ -181,6 +181,8 @@ despotaBase <- function(data, distmat = NULL, distMethod = "euclidean",
   }
   
   list_values <- list()
+  rck <- NA
+  rcm <- NA
   
   for(i in 2:nrow(MAT)) {
     
