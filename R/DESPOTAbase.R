@@ -184,6 +184,10 @@ despotaBase <- function(data, distmat = NULL, distMethod = "euclidean",
   rck <- NA
   rcm <- NA
   
+  # inizializzazione mia per evitare un errore
+  rck <- NA
+  rcm <- NA
+
   for(i in 2:nrow(MAT)) {
     
     if(is.na(clustest[i])) {
