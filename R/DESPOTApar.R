@@ -149,6 +149,7 @@ despotaPar <- function(data, distmat = NULL, distMethod = "euclidean",
   }
   
   list_values <- list()
+  # inizializzazione mia per evitare un errore
   rck <- NA
   rcm <- NA
   

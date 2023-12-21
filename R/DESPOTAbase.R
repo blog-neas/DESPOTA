@@ -181,9 +181,6 @@ despotaBase <- function(data, distmat = NULL, distMethod = "euclidean",
   }
   
   list_values <- list()
-  rck <- NA
-  rcm <- NA
-  
   # inizializzazione mia per evitare un errore
   rck <- NA
   rcm <- NA
