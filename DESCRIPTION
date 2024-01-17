@@ -1,6 +1,6 @@
 Package: DESPOTA
 Title: DEndogram Slicing through a PermutatiOn Test Approach
-Version: 0.1.5
+Version: 0.1.6
 Authors@R: c(
     person("Domenico", "Vistocco", email = "domenico.vistocco@unina.it", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8541-6755")),
     person("Alfonso", "Iodice D'Enza", email = "iodicede@unina.it", role = c("aut"), comment = c(ORCID = "0000-0002-6147-0052")),

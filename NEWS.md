@@ -1,3 +1,8 @@
+# DESPOTA 0.1.6
+
+* Added `summary.despota` method function. 
+
+
 # DESPOTA 0.1.5
 
 * Added a devel branch.
