@@ -73,3 +73,24 @@ plot.despota <- function(x, main = NULL, sub = NULL, ...) {
   graphics::par(mar = par0mar)
   
 }
+
+
+#' summary.despota
+#' 
+#' @description summarize a despota class object
+#' 
+#' @param x a despota object
+#' @param ... additional options passed to the summary function
+#' 
+#' @return a membership vector of the despota model 
+#' @export 
+#'
+#' @examples
+#' data <- c(1,2,3,4,5, 7,9,10,11,12, 19,24,28,32,38, 54)
+#' out <- despota(data, alpha = .05, seed = 31, listVal = TRUE, par = FALSE)
+#' summary(out)
+summary.despota<- function(x, ...){
+  memb <- as.numeric(gsub("C","",x$DF$cluster[order(x$DF$observation)]))
+  names(memb) <- x$DF$observation[order(x$DF$observation)]
+  memb
+}
