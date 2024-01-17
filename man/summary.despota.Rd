@@ -4,10 +4,10 @@
 \alias{summary.despota}
 \title{summary.despota}
 \usage{
-\method{summary}{despota}(x, ...)
+\method{summary}{despota}(object, ...)
 }
 \arguments{
-\item{x}{a despota object}
+\item{object}{a despota object}
 
 \item{...}{additional options passed to the summary function}
 }

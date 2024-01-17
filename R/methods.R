@@ -10,6 +10,7 @@
 #' @return a dendrogram with the output of the despota model 
 #' @import dendextend
 #' @importFrom graphics abline mtext par
+#' @rdname plot.despota
 #' @export 
 #'
 #' @examples
@@ -79,18 +80,19 @@ plot.despota <- function(x, main = NULL, sub = NULL, ...) {
 #' 
 #' @description summarize a despota class object
 #' 
-#' @param x a despota object
+#' @param object a despota object
 #' @param ... additional options passed to the summary function
 #' 
 #' @return a membership vector of the despota model 
+#' @rdname summary.despota
 #' @export 
 #'
 #' @examples
 #' data <- c(1,2,3,4,5, 7,9,10,11,12, 19,24,28,32,38, 54)
 #' out <- despota(data, alpha = .05, seed = 31, listVal = TRUE, par = FALSE)
 #' summary(out)
-summary.despota<- function(x, ...){
-  memb <- as.numeric(gsub("C","",x$DF$cluster[order(x$DF$observation)]))
-  names(memb) <- x$DF$observation[order(x$DF$observation)]
+summary.despota<- function(object, ...){
+  memb <- as.numeric(gsub("C","",object$DF$cluster[order(object$DF$observation)]))
+  names(memb) <- object$DF$observation[order(object$DF$observation)]
   memb
 }
